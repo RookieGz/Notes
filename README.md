@@ -1,5 +1,5 @@
 # Notes
-[text](a)  
+[text](#a)  
 
 个人学习笔记
 
