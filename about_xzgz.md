@@ -22,6 +22,38 @@
 - mobx：前端应用的全局状态管理
 - sass：前端应用的样式
 
+部署
+- 利用github的webhook进行自动化部署。
+- webhook触发后执行shell脚本完成自动拉代码、docker构建、运行应用。
+```shell
+#!bin/sh
+
+exitError() {
+  echo "---starting $1---"
+  $1
+  if [ $? -eq 0 ]; then
+    echo "---$1 successfully---"
+  else
+    echo "!!!!!!!!!!$1 error!!!!!!!!!!"
+    exit 0
+  fi
+}
+
+echo "==========starting rebuild=========="
+
+cd /root/xzgz
+
+exitError "git pull"
+
+exitError "docker build -t xzgz_i ."
+docker rm -f xzgz_i
+docker stop xzgz_c
+docker rm -f xzgz_c
+exitError "docker run -d -p 3000:3000 --name xzgz_c xzgz_i"
+
+echo "==========end rebuild=========="
+```
+
 ## 遇到的一些问题
 
 ### tsconfig.json 里路径映射问题
@@ -196,3 +228,4 @@ export { initializeStore, store };
 ```
 
 ## 剩余问题
+### 现在session没有写入持久层，每次重新构建导致所有用户登录失效。
