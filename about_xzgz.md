@@ -21,6 +21,7 @@
 - Nextjs：react 的服务端渲染
 - mobx：前端应用的全局状态管理
 - sass：前端应用的样式
+- github api：完成笔记储存，及markdown文件转html功能
 
 部署
 - 利用github的webhook进行自动化部署。
