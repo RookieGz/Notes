@@ -1,4 +1,4 @@
-![script_async_defer](https://xzgz.top/FILES/notes_images/script_async_defer.png)
+<div align=center><img src="https://xzgz.top/FILES/notes_images/script_async_defer.png"></div>
 
 1. defer 和 async 在网络读取（下载）这块儿是一样的，都是异步的（相较于 HTML 解析）
 2. 它俩的差别在于脚本下载完之后何时执行，显然 defer 是最接近我们对于应用脚本加载和执行的要求的
