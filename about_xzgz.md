@@ -12,9 +12,10 @@
 - nodemailer：发送邮件
 - mysql2：数据库操作
 - nodemon：开发模式下热更新
-- typescript
+- typescript：类型检查
 - ts-node：完成开发模式下运行 ts 文件
 - tsconfig-paths：修复开发模式下 tsconfig.json 里路径映射在 ts-node 下不起作用。
+- nginx：将文件服务器和动态服务结合，利用反向代理配置
 
 前台
 
