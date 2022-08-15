@@ -33,7 +33,7 @@ docker images -a
 ### 删除镜像
 
 ```shell
-docker rmi [镜像名称/id]
+docker rmi <镜像名称/id>
 ```
 
 删除所有镜像
@@ -47,7 +47,7 @@ docker rmi $(docker images -a)
 ### 创建/运行容器
 
 ```shell
-docker run [镜像名称]
+docker run <镜像名称>
 ```
 
 可以加一些参数配置
@@ -73,7 +73,7 @@ docker ps -a
 ## 删除镜像
 
 ```shell
-docker rm [镜像名称/ID]
+docker rm <镜像名称/ID>
 ```
 
 删除所有镜像
@@ -83,3 +83,15 @@ docker rm -f $(docker ps -a)
 ```
 
 -f：强制删除
+
+# docker 和宿主机共享文件夹
+
+在命令中
+
+```shell
+docker run -v <主机目录>:<容器目录>
+```
+在Dockerfile中
+```Dockerfile
+VOLUME /notes /notes 
+```

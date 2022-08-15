@@ -1,6 +1,7 @@
 # Nginx 的使用
 
-## Nginx命令
+## Nginx 命令
+
 ```nginx
 nginx # 开启
 nginx -s reload # 重启
@@ -25,6 +26,7 @@ server {
 ## 如何使用 Nginx 实现反向代理
 
 在本地服务里配置
+
 ```nginx
 server {
   ...
@@ -35,15 +37,28 @@ server {
 }
 ```
 
-## Nginx配置ssl
+## Nginx 配置 ssl
+
 ```nginx
 server {
   listen 443 ssl;
   server_name xzgz.top;
-	
+
   ssl_certificate /root/xxx/xxx.pem;
   ssl_certificate_key /root/xxx/xxx.key;
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
   ssl_ciphers ECDHE-RSA-AES128-GCM-SMA256:HIGH:!aNull:!MD5:!RC4:!DHE;
+}
+```
+
+## 配置单页应用
+
+当配置 try_files 找不到某个页面资源，这时，nginx 会尝试加载 index.html，加载 index.html 之后，react-router 就能起作用并匹配我们输入的/home 路由，从而显示正确的 home 页面。
+
+```sh
+server {
+  location / {
+    try_file $uri $uri/ /index.html
+  }
 }
 ```
