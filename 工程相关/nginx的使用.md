@@ -1,3 +1,6 @@
+# Nginx
+Nginx（发音同「engine X」）是异步框架的網頁伺服器，也可以用作反向代理、负载平衡器和HTTP缓存。
+
 # Nginx 的使用
 
 ## Nginx 命令
