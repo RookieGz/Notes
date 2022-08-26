@@ -83,7 +83,7 @@ function autorun(handler) {
 // 循环递归执行new Observable
 function _createObservable(_target) {
   if (typeof _target === "object") {
-    const _val = {};
+    const _val = Array.isArray(_target) ? [] : {};
     const keys = Object.keys(_target);
 
     for (let i of keys) {
