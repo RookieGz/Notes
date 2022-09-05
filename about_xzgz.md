@@ -230,4 +230,3 @@ export { initializeStore, store };
 ```
 
 ## 剩余问题
-### 现在session没有写入持久层，每次重新构建导致所有用户登录失效。
