@@ -45,4 +45,65 @@ callback会被两种情况触发：
 - [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/IntersectionObserver/IntersectionObserver)
 - [阮一峰阮一峰的网络日志](https://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html)
 
+## 懒加载实现
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>懒加载</title>
+  </head>
+
+  <style>
+    #image-list li img {
+      height: 100px;
+    }
+  </style>
+
+  <body>
+    <ul id="image-list"></ul>
+
+    <script>
+      const list = document.getElementById("image-list");
+      const fragment = document.createDocumentFragment();
+      const clientHeight = document.documentElement.clientHeight;
+
+      function lazyLoad(entryArr, observer) {
+        console.log(entryArr)
+        entryArr.forEach((entry) => {
+          const isSwitched = !!Number(entry.target.getAttribute("switch"));
+          // isIntersecting 是否与根元素、或者窗口交叉（是否显示）
+          if (entry.isIntersecting && !isSwitched) {
+            entry.target.src = entry.target.getAttribute("data-src");
+            entry.target.setAttribute("switch", 1);
+            // 注销监听元素
+            observer.unobserve(entry.target);
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(lazyLoad);
+
+      Array.from({ length: 100 }).forEach((v) => {
+        const li = document.createElement("li");
+        const img = document.createElement("img");
+
+        img.src = "https://xzgz.top/favicon.ico";
+        img.setAttribute("data-src", "https://xzgz.top/FILES/bg.jpeg");
+        img.setAttribute("switch", 0);
+
+        observer.observe(img);
+
+        li.appendChild(img);
+        fragment.appendChild(li);
+      });
+
+      list.appendChild(fragment);
+    </script>
+  </body>
+</html>
+```
 
