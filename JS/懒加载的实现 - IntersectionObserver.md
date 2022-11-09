@@ -1,5 +1,6 @@
 # 懒加载的实现 - IntersectionObserver
 
+@ZGZ
 常见的懒加载的解决方案是在window上添加滚动事件，通过需要观察的元素的offsetTop和容器的scrollTop + clientHeight进行比较，如果offsetTop < scrollTop + clientHeight，则证明元素已经滚动到可视区域。或者是在window上添加滚动事件，在滚动的过程中使用getBoundingClientRect()方法判断被观察的元素top与clientHeight进行比较，如果getBoundingClientRect().top < clientHeight 则证明元素已经滚动到可视区域。但是这两种方法都有一个共同的问题，都需要监听window的滚动事件，这会导致该事件频繁触发造成性能问题。IntersectionObserver比较好的解决了这个问题：
 
 ## 使用方法
