@@ -1,4 +1,29 @@
-# xzgz.top 网站记录
+# 网站2.0版本更新
+因为之前的写法，让项目目录看起来很乱，页面风格设计，后端接口命名都很糟糕，决定将项目重构。大体上还是使用Koa全家桶 + NextJS。调整了一些细节的东西。
+## 更新点
+
+- 不再使用tsc编译ts文件，取而代之的是使用webpack进行打包服务端代码。避免路径映射这种问题。
+- 使用`webpack --weatch`监听server文件夹。打包到.server文件夹下，在通过使用nodemon对.server进行监听，热更新服务。
+- 因为不想将next的根目录和项目的更目录重合导致结构混乱，新建client文件夹作为nextJS的根目录。并且设置client/next.config.js里设置：
+```javascript
+const nextConfig = {
+  // ...
+  distDir: "../.next",// 设置静态输出文件夹
+  // ...
+};
+
+module.exports = nextConfig;
+
+```
+
+- 改用style-component代替sass
+
+之前没有说明文章系统。现在说一下
+## 文章系统
+主要使用数据库+githubAPI，所有笔记都是以markdown文件的形式存在一个私有仓库里，新增文章直接上传一个`.md`文件，想要修改文章就直接在仓库里修改markdown文件内容。搜索也是使用的github api，需要指定查询的仓库。在数据库里存文章列表及文章的各个属性。
+
+
+# xzgz.top 网站初版记录
 
 ## 主要技术栈
 
@@ -228,5 +253,3 @@ function initializeStore(initDate?: Store): Store {
 
 export { initializeStore, store };
 ```
-
-## 剩余问题
