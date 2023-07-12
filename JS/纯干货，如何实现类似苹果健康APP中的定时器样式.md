@@ -2,7 +2,7 @@
 最近失业在家，闲来无事，就一直想实现之前很在意的苹果健康中的定时器样式。
 苹果手机将睡眠闹钟移动到健康APP里之后，睡眠的定时器功能我非常喜欢。通过拖动端点来确定睡眠时间，移动整个滑块设置时间段，这个交互在前端中不太常见，接下来就分析这个功能如何实现。本篇博客只讨论如何实现UI，其他的功能暂时不实现。
 
-![RPReplay_Final1689056404-2.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ca54300a9144a9abef02d0585b8bff4~tplv-k3u1fbpfcp-watermark.image?)
+![RPReplay_Final1689056404-2.gif](https://xzgz.top/FILES/4d97bb8ec9ddef1a1a1709c00.gif)
 
 # 需求分析
 
