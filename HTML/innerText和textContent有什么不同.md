@@ -74,13 +74,13 @@ hello4world
 </p>
 ```
 
-可以看到 innerText 的取值也有换行，并且作为 setter 将换行转换成<br>。
+可以看到 innerText 的取值也有换行，并且作为 setter 将换行转换成\<br>。
 
 ## textContent
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent)
 
-与 innerText 相似都可以获取当前元素及所有子元素的文本内容，但是 textContent 也可以获取被隐藏的子元素的文字。
+与 innerText 相似都可以获取当前元素及所有子元素的文本内容，并且 textContent 也可以获取被隐藏的子元素的文字。
 
 ```html
 <p id="tester" style="white-space: pre-wrap;">
