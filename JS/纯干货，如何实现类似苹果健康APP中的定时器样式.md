@@ -1,7 +1,7 @@
 # 前言
 最近失业在家，闲来无事，就一直想实现之前很在意的苹果健康中的定时器样式。
 苹果手机将睡眠闹钟移动到健康APP里之后，睡眠的定时器功能我非常喜欢。通过拖动端点来确定睡眠时间，移动整个滑块设置时间段，这个交互在前端中不太常见，接下来就分析这个功能如何实现。本篇博客只讨论如何实现UI，其他的功能暂时不实现。
-![RPReplay_Final1689056404-2.gif](/FILES/4d97bb8ec9ddef1a1a1709c03.gif)
+![RPReplay_Final1689056404-2.gif](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/4d97bb8ec9ddef1a1a1709c00-JPE4ANkA41Fh5Aj8jH91qVPsWAsOhF.gif)
 
 # 需求分析
 
@@ -145,7 +145,7 @@ const formatAngle = (angle: number) => {
 ```
 打开页面我们可以得出这样的画面
 
-![截屏2023-07-11 15.33.27.png](/FILES/4d97bb8ec9ddef1a1a1709c04.33.27.png)
+![截屏2023-07-11 15.33.27.png](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/4d97bb8ec9ddef1a1a1709c01.33.27-B4NQPdVdr9VqMl5YPY2v1ZPODQgISw.png)
 
 好丑。。。，不过不要紧，重要的是功能
 
@@ -311,7 +311,7 @@ const isOnSlip = useCallback(
 
 那么到目前为止，就把基础功能完成了，可以滑块的整体拖动，左右节点的单独拖动和极限值的判断。
 
-![屏幕录制2023-07-11-14.06.08.gif](/FILES/4d97bb8ec9ddef1a1a1709c05.06.08.gif)
+![屏幕录制2023-07-11-14.06.08.gif](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/4d97bb8ec9ddef1a1a1709c05.06.08-zEkqXprJYtl0zeAADwFGR2qzPg0HSt.gif)
 
 线上体验地址：https://xzgz.top/blog/example/sliper
 

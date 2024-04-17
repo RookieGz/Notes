@@ -109,7 +109,7 @@ module.exports = () => {
 在这个基础项目中有一个第三方包使用了`hexoid`这个包，这个包里面有`.mjs`文件，所以直接运行会报错`hexoid is not a function`，所以改变一下变更webpack的文件引入优先级就可以避免这个错误。
 
 运行`npx webpack --config webpack.server.config.js && node .server/main.js`，可以看到项目已经运行起来了。
-![截屏2023-06-12 16.37.09.png](/FILES/2e9864a0233d7196d7f616400.37.09.png)
+![截屏2023-06-12 16.37.09.png](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/2e9864a0233d7196d7f616400.37.09-s6ynOBlPr7pzEGKJ3ObKBYRpPwIfMU.png)
 
 现在先写一部分，可以关注我的网站（[xzgz.top](https://xzgz.top)）或者关注我已获取后续内容，完整版代码已上传到[开源仓库](https://github.com/RookieGz/monsoon)。
 
