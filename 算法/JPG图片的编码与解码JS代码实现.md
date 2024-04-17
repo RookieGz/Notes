@@ -33,11 +33,11 @@ YUV分量可以由PAL制系统中归一化（经过伽马校正）的R',G',B'经
 
 ### 熵编码技术
 熵编码是无损资料压缩的一个特别形式。它牵涉到将影像成分以Z字体（zigzag）排列，把相似频率组群在一起（矩阵中往左上方向是越低频率之系数，往右下较方向是较高频率之系数），插入长度编码的零，且接着对剩下的使用霍夫曼编码。 JPEG标准也允许（但是并不要求）在数学上优于霍夫曼编码的算术编码之使用。然而，这个特色几乎很少获使用，因为它被专利所涵盖，且它相较于霍夫曼编码在编码和解码上会更慢。使用算术编码一般会让文件更小约5%。
-![image.png](/FILES/1c18147defbdcae231e81a500.png)
+![image.png](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/1c18147defbdcae231e81a500-DmeKCl8ovIvWJQcUF8jvBqQuh1mzyg.png)
 
 
 对于对一个矩阵进行Z字体序列会是：
-![image.png](/FILES/1c18147defbdcae231e81a501.png)
+![image.png](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/1c18147defbdcae231e81a501-ILICQsQjAHoHCXNGt0MB0qCwZzGGZh.png)
 
 转化后
 

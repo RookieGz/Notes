@@ -57,6 +57,6 @@ public:
 };
 
 ```
- ![截屏2023-12-28 15.34.11.png](/FILES/a313757f5d24fe2dafe47e700.34.11.png)
+ ![截屏2023-12-28 15.34.11.png](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/a313757f5d24fe2dafe47e700.34.11-T1y3pq0VYuMnqoEMtVnQ8l52B0RmXV.png)
 
 真不愧是C++，运行速度太快了。

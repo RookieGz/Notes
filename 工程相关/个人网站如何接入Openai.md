@@ -47,7 +47,7 @@ app.listen(9000, () => {
 
 测试一下：
 
-![截屏2023-04-24 16.28.22.png](/FILES/15e206857258b25dc86d54e00.28.22.png)
+![截屏2023-04-24 16.28.22.png](https://26qgecq9acl2hsew.public.blob.vercel-storage.com/15e206857258b25dc86d54e00.28.22-5plzgTDSkXekGp6yYdNf0Q3BDUxPoN.png)
 
 腾讯云函数会生成一个链接，将链接的路径代理到Openai就可以了。
 
